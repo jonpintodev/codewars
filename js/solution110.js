@@ -1,20 +1,32 @@
-// One of the common ways of representing color is the RGB color model, in which the Red, Green, and Blue primary colors of light are added together in various ways to reproduce a broad array of colors.
+// This function should test if the factor is a factor of base.
 
-// One of the ways to determine brightness of a color is to find the value V of the alternative HSV (Hue, Saturation, Value) color model. Value is defined as the largest component of a color:
+// Return true if it is a factor or false if it is not.
 
-// V = max(R,G,B)
-// You are given a list of colors in 6-digit hexidecimal notation #RRGGBB. Return the brightest of these colors!
+// About factors
+// Factors are numbers you can multiply together to get another number.
 
-// For example,
+// 2 and 3 are factors of 6 because: 2 * 3 = 6
 
-// brightest(["#001000", "#000000"]) == "#001000"
-// brightest(["#ABCDEF", "#123456"]) == "#ABCDEF"
-// If there are multiple brightest colors, return the first one:
+// You can find a factor by dividing numbers. If the remainder is 0 then the number is a factor.
+// You can use the mod operator (%) in most languages to check for a remainder
+// For example 2 is not a factor of 7 because: 7 % 2 = 1
 
-// brightest(["#00FF00", "#FFFF00", "#01130F"]) == "#00FF00"
-// Note that both input and output should use upper case for characters A, B, C, D, E, F.
+// Note: base is a non-negative number, factor is a positive number.
 
-//P:
-//R:
+//P: a non negative number (base) and a positive number (factor)
+//R: true if factor is a factor of base
 //E:
 //P:
+
+function checkForFactor (base, factor) {
+  //conditional that checks for a remainder
+  if (base % factor === 0) {
+    return true
+  }else{
+    return false
+  }
+}
+
+console.log(checkForFactor(10, 2))//true
+console.log(checkForFactor(7, 2))//false
+console.log(checkForFactor(5, 3))//false
