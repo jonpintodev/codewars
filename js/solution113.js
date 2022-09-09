@@ -16,5 +16,9 @@
 //P:
 
 function squareOrSquareRoot(array) {
+  //.map to check each element in the array
+  //Math.sqrt to get the square root of the element
+  // Modulus (%) to check for a remainder
+  //ternary operator to square the number if there is a remainder when we find the square root
   return array.map(x => Math.sqrt(x) % 1 ? x * x : Math.sqrt(x));  
 }
