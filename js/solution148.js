@@ -8,7 +8,12 @@
 // remove("Hi! Hi!") == "Hi! Hi"
 // remove("Hi") == "Hi"
 
-function remove (string) {
-  //coding and coding....
-  return '';
-}
+//a string, always a string
+//return the string with an exclamation removed from the end
+
+// function remove (string) {
+//   //coding and coding....
+//   return '';
+// }
+
+remove = string => string.replace(/\!$/, '')
