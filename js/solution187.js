@@ -18,8 +18,11 @@
 //   }
 // }
 
-//ONE LINER
-chromosomeCheck = sperm => (sperm ==="XX") ? "Congratulations! You're going to have a daughter." : "Congratulations! You're going to have a son."
+// //ONE LINER
+// chromosomeCheck = sperm => (sperm ==="XX") ? "Congratulations! You're going to have a daughter." : "Congratulations! You're going to have a son."
+
+//BEST PRACTICE ON CODEWARS
+chromosomeCheck = sperm => `Congratulations! You're going to have a ${sperm === 'XY' ? 'son' : 'daughter'}.`
 
 console.log(chromosomeCheck('XX'), "Congratulations! You're going to have a daughter.")
 console.log(chromosomeCheck('XY'), "Congratulations! You're going to have a son.")
