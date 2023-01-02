@@ -64,5 +64,3 @@ function answer3(){
   //the answer should be "yes" or "no"
   return "yes";
 }
-
-
