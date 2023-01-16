@@ -50,13 +50,15 @@
 //an array of nums
 //an array of odd nums and an array of even nums
 
-function pickIt(arr){
-  var odd=[],even=[];
-  //for loop
-  for (element of arr)
-    (element % 2 ? odd : even).push(element)
-  return [odd,even];
-}
+// function pickIt(arr){
+//   var odd=[],even=[];
+//   //for loop
+//   for (element of arr)
+//     (element % 2 ? odd : even).push(element)
+//   return [odd,even];
+// }
+
+const pickIt = arr => [arr.filter(element => element % 2), arr.filter(element => !(element % 2)) ]
 
 console.log(pickIt([1, 2]), '[1], [2]')
 console.log(pickIt([1, 2, 3, 4]), '[1, 3], [2, 4]')
