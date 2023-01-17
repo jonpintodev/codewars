@@ -58,7 +58,8 @@
 //   return [odd,even];
 // }
 
-const pickIt = arr => [arr.filter(element => element % 2), arr.filter(element => !(element % 2)) ]
+//ONE LINER NO FOR LOOP
+const pickIt = arr => [arr.filter(element => element % 2),arr.filter(element => !(element % 2)) ]
 
 console.log(pickIt([1, 2]), '[1], [2]')
 console.log(pickIt([1, 2, 3, 4]), '[1, 3], [2, 4]')
